@@ -1,9 +1,9 @@
 import React from "react";
-import NavigationBar from "./components/navbar";
+import NavigationBar from "./components/navbar/navbar";
 import "./assets/styles/App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home
- from "./components/home";
+ from "./components/home/home";
 function App() {
   return (
     <div className="App">
