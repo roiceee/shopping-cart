@@ -24,7 +24,7 @@ function HomeRow({ image, title, buttonLinkToPath, description }: HomeRowProps) 
         <h2 >{title}</h2>
         <p>{description}</p>
         <Link to={`/${buttonLinkToPath}`}>
-          <Button variant="second" className="py-2 px-4 fw-bolder">
+          <Button variant="primary" className="py-2 px-4 fw-bolder rounded-pill">
             Buy {title}
           </Button>
         </Link>

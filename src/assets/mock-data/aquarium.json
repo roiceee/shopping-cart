@@ -1,0 +1,40 @@
+{
+  "arr": [
+    {
+      "id": "aquarium3",
+      "src": " https://i.ibb.co/GQnhLMG/aquarium-3-5gal.jpg",
+      "name": "Aqueon Aquarium 3.5 gallons",
+      "price": 500
+    },
+    {
+      "id": "aquarium1",
+      "src": "https://i.ibb.co/cvcRpRR/aquarium-2gal.jpg",
+      "name": "Fluvial Aquarium 2 gallons",
+      "price": 300
+    },
+    {
+      "id": "aquarium6",
+      "src": "https://i.ibb.co/Zx64Fzr/aquarium-75gal.jpg",
+      "name": "CaribSea Aquarium 75 gallons",
+      "price": 5000
+    },
+      {
+        "id": "aquarium4",
+        "src": "https://i.ibb.co/Wv45yGL/aquarium-5gal.jpg",
+        "name": "Blue Life Aquarium 5 gallons",
+        "price": 700
+      },
+      {
+        "id": "aquarium2",
+        "src": "https://i.ibb.co/Hd550dQ/aquarium-3gal.jpg",
+        "name": "Marine Aquarium 3 gallons",
+        "price": 400
+      },
+      {
+        "id": "aquarium5",
+        "src": "https://i.ibb.co/g772pFP/aquarium-36gal.jpg",
+        "name": "HBH Aquarium 36 gallons",
+        "price": 3000
+      }
+  ]
+}

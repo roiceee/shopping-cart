@@ -29,13 +29,13 @@ function Home() {
         <HomeRow
           image={fishImage}
           title="Fish"
-          buttonLinkToPath="fish"
+          buttonLinkToPath="shop/fish"
           description="We offer a wide variety of ornamental fish suitable for your ponds and aquariums!"
         />
         <HomeRow
           image={aquariumImage}
           title="Aquariums"
-          buttonLinkToPath="aquariums"
+          buttonLinkToPath="shop/aquariums"
           description="Premium housing for your beloved fishes!"
         />
       </Row>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "react-bootstrap/esm/Navbar";
 import Container from "react-bootstrap/esm/Container";
 import Nav from "react-bootstrap/esm/Nav";
@@ -25,17 +25,17 @@ function NavigationBar() {
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" onClick={toggleShow} />
-        <Offcanvas
+        <Navbar.Offcanvas
           show={show}
           id={`offcanvasNavbar-expand-md`}
           aria-labelledby={`offcanvasNavbarLabel-expand-md`}
           placement="end"
-          className="bg-black opacity-75 w-auto text-light"
+          className="bg-white w-75 text-dark"
           onHide={handleClose}
         >
           <Offcanvas.Header
             closeButton
-            className="bg-first"
+            className="bg-first text-light"
           >
             <Offcanvas.Title id="offcanvasNavbarLabel-expand-md">
               AquaShop
@@ -52,19 +52,21 @@ function NavigationBar() {
                   </Navbar.Text>
                   <NavDropdown
                     title="Shop"
-                    menuVariant="dark"
+                    menuVariant="light"
                     className="mx-md-4"
                   >
                     <NavDropdown.Item
                       as={Link}
-                      to="/fish"
+                      to="/shop/fish"
+                      className="text-black"
                       onClick={handleClose}
                     >
                       Fish
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       as={Link}
-                      to="/aquariums"
+                      to="/shop/aquariums"
+                      className="text-black"
                       onClick={handleClose}
                     >
                       Aquariums
@@ -88,7 +90,7 @@ function NavigationBar() {
               </Navbar.Text>
             </Nav>
           </Offcanvas.Body>
-        </Offcanvas>
+        </Navbar.Offcanvas>
       </Container>
     </Navbar>
   );
