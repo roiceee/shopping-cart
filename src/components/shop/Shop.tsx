@@ -17,6 +17,7 @@ interface ShopObject {
 
 function Shop() {
   const params = useParams();
+  const [paramsState, setParamsState] = React.useState(params);
   const [sortState, setSortState] = React.useState<string>("");
   const [shopList, setShopList] = React.useState<Array<ShopObject>>(
     [] as Array<ShopObject>
@@ -75,20 +76,24 @@ function Shop() {
   }, [shopList]);
 
   React.useEffect(() => {
-    if (params.id === "fish") {
+    if (paramsState.id === "fish") {
       setShopList(fishData.arr);
       return;
     }
-    if (params.id === "aquariums") {
+    if (paramsState.id === "aquariums") {
       setShopList(aquariumData.arr);
       return;
     }
-  }, [params]);
+  }, [paramsState]);
+
+  React.useEffect(() => {
+    setParamsState(params)
+  }, [params])
 
   return (
     <Container className="px-2">
       <Row className="my-2">
-        <h1>{_.capitalize(params.id)}</h1>
+        <h1>{_.capitalize(paramsState.id)}</h1>
         <Row className="row-cols-auto">
           <Dropdown>
             <Dropdown.Toggle variant="light" id="dropdown-basic">
