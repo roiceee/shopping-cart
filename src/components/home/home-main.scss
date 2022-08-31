@@ -1,15 +1,6 @@
 @import "../../assets/styles/custom.scss";
 
-// #home-main {
-//     background-color: $second;
-//     background-image: url("images/homepage-main.jpg");
-//     background-size: cover;
-//     background-position: center;
-// }
-
 body {
-    background-color: $second;
-    background-image: url("images/homepage-main.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,5 +8,5 @@ body {
 }
 
 .home-text-container {
-    padding: 60px 10px 60px 10px;
+    padding: 40px 10px 40px 10px;
 }

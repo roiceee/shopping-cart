@@ -7,7 +7,7 @@ import fishIcon from "../../assets/images/logo.png";
 import NavDropdown from "react-bootstrap/esm/NavDropdown";
 import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/esm/Offcanvas";
-import "./navbar.scss"
+import "./navbar.scss";
 
 function NavigationBar() {
   return (
@@ -21,48 +21,50 @@ function NavigationBar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-md`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-md`}
-              placement="end"
-              className="bg-dark bg-opacity-75 w-50 text-light"
-            >
-              <Offcanvas.Header closeButton className="bg-first">
-                <Offcanvas.Title id='offcanvasNavbarLabel-expand-md'>
-                  AquaShop
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-          <Nav
-            className="justify-content-end flex-grow-1 pe-3"
-          >
-          <Navbar.Text className="mx-5">
-            <Nav className="me-auto">
-            <Navbar.Text className="mx-md-4">
-                <Link to="/" className="text-decoration-none">
-                  Home
-                </Link>
-              </Navbar.Text>
-              <NavDropdown title="Shop" menuVariant="dark" className="mx-md-4">
-                <NavDropdown.Item as={Link} to="/fish">
-                  Fish
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/aquariums">
-                  Aquariums
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Navbar.Text className="mx-md-4">
-                <Link to="/about" className="text-decoration-none">
-                  About
-                </Link>
-              </Navbar.Text>
-              <Navbar.Text className="mx-md-4">
-                <Link to="/cart">
-                  <img id="cart-icon" src={cartIcon} />
-                </Link>
+          id={`offcanvasNavbar-expand-md`}
+          aria-labelledby={`offcanvasNavbarLabel-expand-md`}
+          placement="end"
+          className="bg-black opacity-75 w-auto text-light"
+        >
+          <Offcanvas.Header closeButton className="bg-first">
+            <Offcanvas.Title id="offcanvasNavbarLabel-expand-md">
+              AquaShop
+            </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Navbar.Text className="mx-5">
+                <Nav className="me-auto">
+                  <Navbar.Text className="mx-md-4">
+                    <Link to="/" className="text-decoration-none">
+                      Home
+                    </Link>
+                  </Navbar.Text>
+                  <NavDropdown
+                    title="Shop"
+                    menuVariant="dark"
+                    className="mx-md-4"
+                  >
+                    <NavDropdown.Item as={Link} to="/fish">
+                      Fish
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/aquariums">
+                      Aquariums
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <Navbar.Text className="mx-md-4">
+                    <Link to="/about" className="text-decoration-none">
+                      About
+                    </Link>
+                  </Navbar.Text>
+                  <Navbar.Text className="mx-md-4">
+                    <Link to="/cart">
+                      <img id="cart-icon" src={cartIcon} />
+                    </Link>
+                  </Navbar.Text>
+                </Nav>
               </Navbar.Text>
             </Nav>
-          </Navbar.Text>
-          </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
