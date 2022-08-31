@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "react-bootstrap/esm/Navbar";
 import Container from "react-bootstrap/esm/Container";
 import Nav from "react-bootstrap/esm/Nav";
@@ -10,6 +10,11 @@ import Offcanvas from "react-bootstrap/esm/Offcanvas";
 import "./navbar.scss";
 
 function NavigationBar() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const toggleShow = () => setShow((s) => !s);
+
   return (
     <Navbar bg="first" variant="dark" expand="md">
       <Container>
@@ -19,14 +24,19 @@ function NavigationBar() {
             AquaShop
           </Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Offcanvas
+        <Navbar.Toggle aria-controls="navbarScroll" onClick={toggleShow} />
+        <Offcanvas
+          show={show}
           id={`offcanvasNavbar-expand-md`}
           aria-labelledby={`offcanvasNavbarLabel-expand-md`}
           placement="end"
           className="bg-black opacity-75 w-auto text-light"
+          onHide={handleClose}
         >
-          <Offcanvas.Header closeButton className="bg-first">
+          <Offcanvas.Header
+            closeButton
+            className="bg-first"
+          >
             <Offcanvas.Title id="offcanvasNavbarLabel-expand-md">
               AquaShop
             </Offcanvas.Title>
@@ -35,7 +45,7 @@ function NavigationBar() {
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Navbar.Text className="mx-5">
                 <Nav className="me-auto">
-                  <Navbar.Text className="mx-md-4">
+                  <Navbar.Text className="mx-md-4" onClick={handleClose}>
                     <Link to="/" className="text-decoration-none">
                       Home
                     </Link>
@@ -45,19 +55,31 @@ function NavigationBar() {
                     menuVariant="dark"
                     className="mx-md-4"
                   >
-                    <NavDropdown.Item as={Link} to="/fish">
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/fish"
+                      onClick={handleClose}
+                    >
                       Fish
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/aquariums">
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/aquariums"
+                      onClick={handleClose}
+                    >
                       Aquariums
                     </NavDropdown.Item>
                   </NavDropdown>
                   <Navbar.Text className="mx-md-4">
-                    <Link to="/about" className="text-decoration-none">
+                    <Link
+                      to="/about"
+                      className="text-decoration-none"
+                      onClick={handleClose}
+                    >
                       About
                     </Link>
                   </Navbar.Text>
-                  <Navbar.Text className="mx-md-4">
+                  <Navbar.Text className="mx-md-4" onClick={handleClose}>
                     <Link to="/cart">
                       <img id="cart-icon" src={cartIcon} />
                     </Link>
@@ -66,7 +88,7 @@ function NavigationBar() {
               </Navbar.Text>
             </Nav>
           </Offcanvas.Body>
-        </Navbar.Offcanvas>
+        </Offcanvas>
       </Container>
     </Navbar>
   );
