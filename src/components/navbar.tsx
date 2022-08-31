@@ -6,7 +6,6 @@ import cartIcon from "../assets/images/shopping-cart.svg";
 import fishIcon from "../assets/images/logo.png";
 import NavDropdown from "react-bootstrap/esm/NavDropdown";
 import { Link } from "react-router-dom";
-// import DropdownItem from "react-bootstrap/esm/DropdownItem";
 
 function NavigationBar() {
   return (
@@ -25,22 +24,27 @@ function NavigationBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           ></Nav>
-          <Navbar.Text>
-            <Nav className="me-auto gap-3">
-              <NavDropdown title="Shop" menuVariant="dark">
-                <NavDropdown.Item as={Link} to="/Fish">
+          <Navbar.Text className="mx-5">
+            <Nav className="me-auto">
+            <Navbar.Text className="mx-4">
+                <Link to="/" className="text-decoration-none">
+                  Home
+                </Link>
+              </Navbar.Text>
+              <NavDropdown title="Shop" menuVariant="dark" className="mx-4">
+                <NavDropdown.Item as={Link} to="/fish">
                   Fish
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/aquariums">
                   Aquariums
                 </NavDropdown.Item>
               </NavDropdown>
-              <Navbar.Text>
+              <Navbar.Text className="mx-4">
                 <Link to="/about" className="text-decoration-none">
                   About
                 </Link>
               </Navbar.Text>
-              <Navbar.Text>
+              <Navbar.Text className="mx-4">
                 <Link to="/cart">
                   <img id="cart-icon" src={cartIcon} />
                 </Link>
