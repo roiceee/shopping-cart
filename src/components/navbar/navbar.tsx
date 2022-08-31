@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/esm/Nav";
 import cartIcon from "../../assets/images/shopping-cart.svg";
 import fishIcon from "../../assets/images/logo.png";
 import NavDropdown from "react-bootstrap/esm/NavDropdown";
+import Dropdown from "react-bootstrap/esm/Dropdown"
 import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/esm/Offcanvas";
 import "./navbar.scss";
@@ -30,7 +31,7 @@ function NavigationBar() {
           id={`offcanvasNavbar-expand-md`}
           aria-labelledby={`offcanvasNavbarLabel-expand-md`}
           placement="end"
-          className="bg-white w-75 text-dark"
+          className="bg-first w-75 text-light"
           onHide={handleClose}
         >
           <Offcanvas.Header
@@ -52,13 +53,13 @@ function NavigationBar() {
                   </Navbar.Text>
                   <NavDropdown
                     title="Shop"
-                    menuVariant="light"
                     className="mx-md-4"
                   >
+                    <Dropdown.Menu variant="dark" className="bg-first border-0 p-0">
                     <NavDropdown.Item
                       as={Link}
                       to="/shop/fish"
-                      className="text-black"
+                      className="text-light"
                       onClick={handleClose}
                     >
                       Fish
@@ -66,11 +67,12 @@ function NavigationBar() {
                     <NavDropdown.Item
                       as={Link}
                       to="/shop/aquariums"
-                      className="text-black"
+                      className="text-light"
                       onClick={handleClose}
                     >
                       Aquariums
                     </NavDropdown.Item>
+                    </Dropdown.Menu>
                   </NavDropdown>
                   <Navbar.Text className="mx-md-4">
                     <Link
