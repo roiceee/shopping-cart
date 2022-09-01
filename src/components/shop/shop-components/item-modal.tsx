@@ -24,7 +24,9 @@ function ItemModal({ modalShow, itemObj, setModalShow }: ItemModalProps) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
+        <div className="text-center">
         <img src={itemObj?.src} alt={itemObj.name} className="img-fluid" />
+        </div>
         <Row className="mt-2">
           <div style={{ color: "darkorange", fontSize: "1.05rem" }}>
             ₱{itemObj.price}
