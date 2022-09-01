@@ -1,6 +1,6 @@
 import * as React from "react";
 import Modal from "react-bootstrap/esm/Modal";
-import { generateStars } from "../../../utils/shopUtils/item-utils.jsx";
+import { generateStars } from "../../../utils/shopUtils/item-utils";
 import Row from "react-bootstrap/esm/Row";
 
 interface ItemModalProps {
