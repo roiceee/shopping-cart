@@ -4,6 +4,7 @@ const defaultItemObject : ItemObject = {
     src: "",
     stars: 0,
     price: 0,
+    
 }
 
 export {defaultItemObject}
