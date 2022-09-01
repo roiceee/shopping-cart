@@ -4,7 +4,7 @@ import "./assets/styles/App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/home/home";
 import Footer from "./components/footer";
-import Shop from "./components/shop/Shop";
+import Shop from "./components/shop/shop";
 function App() {
   return (
     <div className="App">

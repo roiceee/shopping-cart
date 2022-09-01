@@ -4,61 +4,71 @@
       "id": "red-tail-catfish",
       "src": "https://i.ibb.co/ckDfS5W/red-tail-catfish.jpg",
       "name": "Red-tail Catfish",
-      "price": 600
+      "price": 600,
+      "stars": 4
     },
     {
       "id": "swordtail",
       "src": "https://i.ibb.co/KxgFn8W/swordtail.jpg",
       "name": "Swordtail",
-      "price": 50
+      "price": 50,
+      "stars": 4
     },
     {
       "id": "betta",
       "src": "https://i.ibb.co/YdW3d8C/betta.jpg",
       "name": "Betta",
-      "price": 80
+      "price": 80,
+      "stars": 5
     },
     {
       "id": "molly",
       "src": "https://i.ibb.co/qYC2mzb/molly.jpg",
       "name": "Molly",
-      "price": 40
+      "price": 40,
+      "stars": 3
     },
     {
       "id": "neon-tetra",
       "src": "https://i.ibb.co/YNFFKRs/neon-tetra.jpg",
       "name": "Neon Tetra",
-      "price": 100
+      "price": 100,
+      "stars": 5
     },
     {
       "id": "guppy",
       "src": "https://i.ibb.co/Kj4jYb2/guppy.jpg",
       "name": "Guppy",
-      "price": 40
+      "price": 40,
+      "stars": 2
     },
     {
       "id": "dwarf-gourami",
       "src": "https://i.ibb.co/mtgxSNm/dwarf-gourami.jpg",
       "name": "Dwarf Gourami",
-      "price": 100
+      "price": 100,
+      "stars": 3
     },
     {
       "id": "oscar-fish",
       "src": "https://i.ibb.co/CsBd53f/oscar-fish.jpg",
       "name": "Oscar Fish",
-      "price": 500
+      "price": 500,
+      "stars": 4
     },
     {
       "id": "pleco",
       "src": "https://i.ibb.co/h2jtkSH/pleco.jpg",
       "name": "Plecostomus",
-      "price": 120
+      "price": 120,
+      "stars": 2
     },
     {
       "id": "zebra-danios",
       "src": "https://i.ibb.co/khM8wZ6/zebra-danios.jpg",
       "name": "Zebra Danios",
-      "price": 80
+      "price": 80,
+      "stars": 3
     }
   ]
 }

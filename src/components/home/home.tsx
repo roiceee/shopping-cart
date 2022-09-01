@@ -2,9 +2,9 @@ import * as React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import "./home-main.scss";
-import fishImage from "./images/homepage-shop-fish.avif";
-import backgroundImage from "./images/homepage-main.jpg";
-import aquariumImage from "./images/homepage-shop-aquarium.avif";
+import fishImage from "../../assets/images/homepage-shop-fish.avif";
+import backgroundImage from "../../assets/images/homepage-main.jpg";
+import aquariumImage from "../../assets/images/homepage-shop-aquarium.avif";
 import HomeRow from "./home-row";
 
 function Home() {

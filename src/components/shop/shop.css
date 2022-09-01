@@ -1,0 +1,9 @@
+#invert-icon:active {
+    transform: scale(1.15);
+}
+
+@media all and (min-width: 1000px){
+    #invert-icon:hover {
+        transform: scale(1.15);
+    }
+}
