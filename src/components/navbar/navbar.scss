@@ -16,7 +16,15 @@
     margin: 0px!important;
 }
 
+.dropdown-item {
+    margin-bottom: 4px;
+}
+
 .dropdown-item:active {
     background-color: rgba(255, 255, 255, 0.15);
+}
+
+#offcanvasNavbar-expand-md {
+    width: 60%;
 }
 

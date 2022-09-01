@@ -1,0 +1,9 @@
+.card:active {
+    transform: scale(1.03);
+}
+
+@media all and (min-width: 1000px){
+    .card:hover {
+        transform: scale(1.03);
+    }
+}

@@ -28,10 +28,10 @@ function NavigationBar() {
         <Navbar.Toggle aria-controls="navbarScroll" onClick={toggleShow} />
         <Navbar.Offcanvas
           show={show}
-          id={`offcanvasNavbar-expand-md`}
-          aria-labelledby={`offcanvasNavbarLabel-expand-md`}
+          id="offcanvasNavbar-expand-md"
+          aria-labelledby="offcanvasNavbarLabel-expand-md"
           placement="end"
-          className="bg-first w-75 text-light"
+          className="bg-first text-light"
           onHide={handleClose}
         >
           <Offcanvas.Header
