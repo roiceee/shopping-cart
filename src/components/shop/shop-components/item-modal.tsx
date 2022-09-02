@@ -1,9 +1,14 @@
 import * as React from "react";
 import Modal from "react-bootstrap/esm/Modal";
-import { generateStars } from "../../../utils/shopUtils/item-utils";
+import { generateStars } from "../../../utils/shop-utils/item-utils";
 import Row from "react-bootstrap/esm/Row";
-import AddToCart from "./add-to-cart";
+import CartAdder from "./add-to-cart";
 
+interface ItemModalProps {
+  modalShow: boolean;
+  itemObj: ItemObject;
+  setModalShow: React.Dispatch<React.SetStateAction<boolean>>
+}
 
 function ItemModal({ modalShow, itemObj, setModalShow }: ItemModalProps) {
   return (
@@ -29,7 +34,7 @@ function ItemModal({ modalShow, itemObj, setModalShow }: ItemModalProps) {
           </div>
           <div className="d-flex gap-1 m-1">{generateStars(itemObj.stars)}</div>
         </Row>
-        <AddToCart/>
+        <CartAdder itemObj={itemObj}/>
       </Modal.Body>
     </Modal>
   );

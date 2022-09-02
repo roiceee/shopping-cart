@@ -4,7 +4,15 @@ const defaultItemObject : ItemObject = {
     src: "",
     stars: 0,
     price: 0,
-    
 }
 
-export {defaultItemObject}
+const defaultCartItemObject : CartItemObject = {
+    item: defaultItemObject,
+    quantity: 0,
+}
+
+const defaultCartObject : CartObject = {
+    items: []
+}
+
+export {defaultItemObject, defaultCartItemObject, defaultCartObject}

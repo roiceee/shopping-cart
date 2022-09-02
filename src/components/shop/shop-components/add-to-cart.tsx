@@ -3,11 +3,36 @@ import Button from "react-bootstrap/esm/Button";
 import Row from "react-bootstrap/esm/Row";
 import Container from "react-bootstrap/esm/Container";
 import "./add-to-cart.css";
+import { useContext } from "react";
+import CartContext from "../../../utils/context/cart-context";
 
 const MAXQUANTITY = 99;
+interface AddToCartProps {
+  itemObj: ItemObject;
+}
 
-function AddToCart() {
-  const [itemQuantity, setItemQuantity] = React.useState<number>(0);
+function CartAdder({ itemObj }: AddToCartProps) {
+  const { cartState, setCartState } = useContext(CartContext);
+  const [currentCartItem, setCurrentCartItem] = React.useState<CartItemObject>({
+    quantity: 0,
+    item: itemObj,
+  });
+
+  const addToCart = React.useCallback((): void => {
+
+    if (currentCartItem.quantity === 0) {
+      return;
+    }
+
+    setCartState((prevCartState) => ({
+      ...prevCartState,
+      items: [...prevCartState.items, currentCartItem],
+    }));
+    setCurrentCartItem((currentCartItem) => ({
+      ...currentCartItem,
+      quantity: 0,
+    }));
+  }, [currentCartItem]);
 
   const itemQuantityHandler = React.useCallback(
     (e: React.FormEvent<HTMLInputElement>): void => {
@@ -16,35 +41,64 @@ function AddToCart() {
         return;
       }
       if (value > MAXQUANTITY) {
-        setItemQuantity(MAXQUANTITY);
+        setCurrentCartItem((prevCartItem) => ({
+          ...prevCartItem,
+          quantity: 99,
+        }));
         return;
       }
       if (value < 0) {
-        setItemQuantity(0);
+        setCurrentCartItem((prevCartItem) => ({
+          ...prevCartItem,
+          quantity: 0,
+        }));
         return;
       }
-      setItemQuantity(value);
+      setCurrentCartItem((prevCartItem) => ({
+        ...prevCartItem,
+        quantity: value,
+      }));
     },
     []
   );
 
   const addQuantityHandler = React.useCallback((): void => {
-    setItemQuantity((prevItemQuantity) => {
-      if (prevItemQuantity + 1 > MAXQUANTITY) {
-        return 99;
+    setCurrentCartItem((prevCartItem) => {
+      if (prevCartItem.quantity + 1 > MAXQUANTITY) {
+        return {
+          ...prevCartItem,
+          quantity: 99,
+        };
       }
-      return prevItemQuantity + 1;
+      return {
+        ...prevCartItem,
+        quantity: prevCartItem.quantity + 1,
+      };
     });
-  }, [itemQuantity]);
+  }, [currentCartItem.quantity]);
 
   const minusQuantityHandler = React.useCallback((): void => {
-    setItemQuantity((prevItemQuantity) => {
-      if (prevItemQuantity - 1 < 0) {
-        return 0;
+    setCurrentCartItem((prevCartItem) => {
+      if (prevCartItem.quantity - 1 < 0) {
+        return {
+          ...prevCartItem,
+          quantity: 0,
+        };
       }
-      return prevItemQuantity - 1;
+      return {
+        ...prevCartItem,
+        quantity: prevCartItem.quantity - 1,
+      };
     });
-  }, [itemQuantity]);
+  }, [currentCartItem.quantity]);
+
+  React.useEffect(() => {
+    console.log(currentCartItem);
+  }, [currentCartItem]);
+
+  React.useEffect(() => {
+    console.log(cartState);
+  }, [cartState]);
 
   return (
     <Container>
@@ -69,7 +123,7 @@ function AddToCart() {
           </svg>
         </Button>
         <input
-          value={itemQuantity}
+          value={currentCartItem.quantity}
           onChange={itemQuantityHandler}
           className="item-quantity text-center my-auto"
         />
@@ -96,10 +150,12 @@ function AddToCart() {
         </Button>
       </Row>
       <Row>
-        <Button className="rounded-pill">Add to cart</Button>
+        <Button className="rounded-pill" onClick={addToCart} disabled={currentCartItem.quantity === 0 ? true : false}>
+          Add to cart
+        </Button>
       </Row>
     </Container>
   );
 }
 
-export default AddToCart;
+export default CartAdder;

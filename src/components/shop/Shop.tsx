@@ -10,9 +10,13 @@ import ItemCard from "./shop-components/item";
 import invertIcon from "../../assets/images/invert.png";
 import ItemModal from "./shop-components/item-modal";
 import "./shop.css";
-import { sortArray, invertArray } from "../../utils/shopUtils/sorter";
+import { sortArray, invertArray } from "../../utils/shop-utils/sorter";
 import { defaultItemObject } from "../../utils/defaults";
 
+interface SortStateInterface {
+  sortBy: string;
+  inverted: boolean;
+}
 
 function Shop() {
   const params = useParams();

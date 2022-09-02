@@ -2,7 +2,14 @@ import * as React from "react";
 import Card from "react-bootstrap/esm/Card";
 import Row from "react-bootstrap/esm/Row";
 import "./item.css"
-import {generateStars} from "../../../utils/shopUtils/item-utils"
+import {generateStars} from "../../../utils/shop-utils/item-utils"
+
+interface ItemProps {
+  itemObj: ItemObject;
+  setModalShow: React.Dispatch<React.SetStateAction<boolean>>;
+  setCurrentItem: React.Dispatch<React.SetStateAction<ItemObject>>;
+}
+
 
 function ItemCard({ itemObj, setModalShow, setCurrentItem }: ItemProps) {
 
