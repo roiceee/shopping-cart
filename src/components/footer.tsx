@@ -2,7 +2,10 @@ import * as React from "react";
 
 function Footer() {
   return (
-    <div className="container-fluid text-center p-1 bg-primary" style={{marginTop: "auto"}}>
+    <div
+      className="container-fluid text-center p-1 bg-primary"
+      style={{ marginTop: "auto" }}
+    >
       <a
         href="https://github.com/roiceee"
         target="_blank"

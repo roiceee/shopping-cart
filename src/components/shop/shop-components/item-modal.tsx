@@ -2,12 +2,8 @@ import * as React from "react";
 import Modal from "react-bootstrap/esm/Modal";
 import { generateStars } from "../../../utils/shopUtils/item-utils";
 import Row from "react-bootstrap/esm/Row";
+import AddToCart from "./add-to-cart";
 
-interface ItemModalProps {
-  modalShow: boolean;
-  itemObj: ItemObject;
-  setModalShow: (a: boolean) => void;
-}
 
 function ItemModal({ modalShow, itemObj, setModalShow }: ItemModalProps) {
   return (
@@ -33,6 +29,7 @@ function ItemModal({ modalShow, itemObj, setModalShow }: ItemModalProps) {
           </div>
           <div className="d-flex gap-1 m-1">{generateStars(itemObj.stars)}</div>
         </Row>
+        <AddToCart/>
       </Modal.Body>
     </Modal>
   );

@@ -1,0 +1,12 @@
+.item-quantity {
+    display: flex;
+    width: 50px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+}
+
+.item-quantity:focus {
+    border: none;
+    outline: none;
+}

@@ -1,11 +1,5 @@
 import React from "react";
 
-interface StarProps {
-  size?: number;
-  color?: string;
-  fill?: string;
-}
-
 function Star({ size = 15, color = "#ffc107", fill = "#ffc107" }: StarProps) {
   return (
     <svg

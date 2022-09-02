@@ -13,10 +13,6 @@ import "./shop.css";
 import { sortArray, invertArray } from "../../utils/shopUtils/sorter";
 import { defaultItemObject } from "../../utils/defaults";
 
-interface SortStateInterface {
-  sortBy: string;
-  inverted: boolean;
-}
 
 function Shop() {
   const params = useParams();

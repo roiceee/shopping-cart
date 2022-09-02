@@ -4,12 +4,6 @@ import Row from "react-bootstrap/esm/Row";
 import "./item.css"
 import {generateStars} from "../../../utils/shopUtils/item-utils"
 
-interface ItemProps {
-  itemObj: ItemObject;
-  setModalShow: React.Dispatch<React.SetStateAction<boolean>>;
-  setCurrentItem: React.Dispatch<React.SetStateAction<ItemObject>>;
-}
-
 function ItemCard({ itemObj, setModalShow, setCurrentItem }: ItemProps) {
 
   const handleItemCardClick = React.useCallback(() : void => {

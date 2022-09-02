@@ -3,13 +3,15 @@ $secondary : #293241;
 $first: #3d5a80;
 $second: #98c1d9;
 $third: #e0fbfc;
+$fourth: #c1c1c1;
 
 $theme-colors: (
-    "primary" : #8f00ff,
-    "secondary" : #293241,
-    "first": #3d5a80,
-    "second": #98c1d9,
-    "third": #e0fbfc,
+    "primary" : $primary,
+    "secondary" : $secondary,
+    "first": $first,
+    "second": $second,
+    "third": $third,
+    "fourth": $fourth,
     "success" : #28a745,
     "danger" : #dc3545,
     "warning" : #ffc107,

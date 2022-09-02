@@ -4,13 +4,6 @@ import Button from "react-bootstrap/esm/Button";
 import { Link } from "react-router-dom";
 import Col from "react-bootstrap/esm/Col"
 
-interface HomeRowProps {
-  image: string;
-  title: string;
-  buttonLinkToPath: string;
-  description: string;
-}
-
 function HomeRow({ image, title, buttonLinkToPath, description }: HomeRowProps) {
   return (
     <Row className="mb-5 text-center mx-auto">
