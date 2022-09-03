@@ -20,7 +20,7 @@ function CartItemCard({ item }: CartItemCardProps) {
   return (
     <>
       <Col>
-        <Card style={{ maxWidth: "400px" }} className="p-1">
+        <Card style={{ maxWidth: "400px" }} className="p-1 mx-auto mb-2">
           <Row>
             <Col className="col-4">
               <div className="rounded-1">

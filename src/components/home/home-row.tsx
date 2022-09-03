@@ -18,7 +18,7 @@ function HomeRow({ image, title, buttonLinkToPath, description }: HomeRowProps) 
         <img
           src={image}
           className="mb-3 img-fluid rounded-2"
-          style={{maxHeight: "350px"}}
+          style={{maxHeight: "280px"}}
         />
         </Col>
         <h2 >{title}</h2>

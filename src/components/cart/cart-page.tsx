@@ -5,9 +5,10 @@ import Col from "react-bootstrap/esm/Col";
 import CartContext from "../../utils/context/cart-context";
 import { useContext } from "react";
 import CartItemCard from "./cart-item-card";
+import Button from "react-bootstrap/esm/Button";
 
 function CartPage() {
-  const { cartState, setCartState } = useContext(CartContext);
+  const { cartState } = useContext(CartContext);
 
   const getTotal = React.useCallback((): JSX.Element => {
     if (cartState.items.length === 0) {
@@ -38,7 +39,7 @@ function CartPage() {
         </Row>
         <Row className="gap-3">
           <Col md>
-            <Row className="px-2 gap-2 row-cols-1">
+            <Row className="px-2 row-cols-1 overflow-auto" style={{height: "450px"}}>
               {cartState.items.map((item) => {
                 return (
                   <CartItemCard
@@ -50,7 +51,10 @@ function CartPage() {
             </Row>
           </Col>
           <Col md>
-            <Row>{getTotal()}</Row>
+            <Row className="text-center">{getTotal()}</Row>
+            <Row>
+              <Button variant="primary" className="mx-auto" style={{width: "200px"}}>Checkout</Button>
+            </Row>
           </Col>
         </Row>
       </Container>
