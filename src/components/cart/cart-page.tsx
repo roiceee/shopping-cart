@@ -42,12 +42,12 @@ function CartPage() {
           }
         </Row>
         <Row className="gap-3">
-          <Col md>
-            <Row className="px-2 row-cols-1  d-flex flex-column" style={{height: "450px"}}>
+          <Col md style={{height: "70vh", overflowY: "auto", backgroundColor: "#F5F5F5 "}} className="py-1 rounded-2">
+            <Row className="px-2 row-cols-1">
               {cartState.items.map((item) => {
                 return (
                   <CartItemCard
-                    key={item.itemProperties.id}
+                    key={item.transactionNumber}
                     item={item}
                   />
                 );
@@ -57,7 +57,7 @@ function CartPage() {
           {cartState.items.length > 0 &&
             <Col md>
             <Row className="text-center">{getTotal()}</Row>
-            <Row>
+            <Row className="mb-3">
               <Button variant="primary" className="mx-auto" style={{width: "200px"}}>Checkout</Button>
             </Row>
           </Col>

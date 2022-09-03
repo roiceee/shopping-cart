@@ -7,6 +7,7 @@ const defaultItemObject : ItemObject = {
 }
 
 const defaultCartItemObject : CartItemObject = {
+    transactionNumber: "",
     itemProperties: defaultItemObject,
     quantity: 0,
 }

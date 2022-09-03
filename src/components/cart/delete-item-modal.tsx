@@ -22,7 +22,7 @@ function DeleteItemModal({ item, show, setModalShow }: DeleteItemModalProps) {
   const deleteCartItem = React.useCallback((): void => {
     setCartState((prevCartState) => {
       const updatedItems = prevCartState.items.filter((cartItem) => {
-        return cartItem.itemProperties.id !== item.itemProperties.id;
+        return cartItem.transactionNumber !== item.transactionNumber;
       });
 
       return {

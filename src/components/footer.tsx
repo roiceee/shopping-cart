@@ -3,7 +3,7 @@ import * as React from "react";
 function Footer() {
   return (
     <div
-      className="container-fluid text-center p-1 bg-primary"
+      className="container-fluid text-center p-1 bg-first"
       style={{ marginTop: "auto" }}
     >
       <a

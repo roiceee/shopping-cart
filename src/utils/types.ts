@@ -1,5 +1,3 @@
-import React from "react";
-
 declare global {
     interface ItemObject {
         id: string;
@@ -10,6 +8,7 @@ declare global {
       }
 
       interface CartItemObject {
+        transactionNumber: string;
         itemProperties: ItemObject;
         quantity: number;
       }

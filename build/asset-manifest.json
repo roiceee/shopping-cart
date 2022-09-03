@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c83f6680.css",
-    "main.js": "/static/js/main.82fe420a.js",
+    "main.js": "/static/js/main.103420e8.js",
     "static/js/787.d6fe38e8.chunk.js": "/static/js/787.d6fe38e8.chunk.js",
     "static/media/homepage-main.jpg": "/static/media/homepage-main.dc9d4658ec5215abaac6.jpg",
     "static/media/homepage-shop-aquarium.avif": "/static/media/homepage-shop-aquarium.c61366d23687f7258361.avif",
@@ -10,11 +10,11 @@
     "static/media/trash.svg": "/static/media/trash.0abd9175fefc7ae8cd82e01012bd0717.svg",
     "static/media/shopping-cart.svg": "/static/media/shopping-cart.17ec3f81e25c1bfbe247711e21fef47a.svg",
     "main.c83f6680.css.map": "/static/css/main.c83f6680.css.map",
-    "main.82fe420a.js.map": "/static/js/main.82fe420a.js.map",
+    "main.103420e8.js.map": "/static/js/main.103420e8.js.map",
     "787.d6fe38e8.chunk.js.map": "/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c83f6680.css",
-    "static/js/main.82fe420a.js"
+    "static/js/main.103420e8.js"
   ]
 }

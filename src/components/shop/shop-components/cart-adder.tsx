@@ -15,6 +15,7 @@ interface AddToCartProps {
 function CartAdder({ itemObj, setModalShow }: AddToCartProps) {
   const { cartState, setCartState } = useContext(CartContext);
   const [currentCartItem, setCurrentCartItem] = React.useState<CartItemObject>({
+    transactionNumber: itemObj.id + cartState.items.length,
     quantity: 0,
     itemProperties: itemObj,
   });
