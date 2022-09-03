@@ -36,6 +36,10 @@ function CartPage() {
           <h6>
             {cartState.items.length} item{cartState.items.length < 2 ? "" : "s"}
           </h6>
+          {
+            cartState.items.length === 0 && 
+            <div className="">Buy some items to view cart :)</div>
+          }
         </Row>
         <Row className="gap-3">
           <Col md>
@@ -50,12 +54,14 @@ function CartPage() {
               })}
             </Row>
           </Col>
-          <Col md>
+          {cartState.items.length > 0 &&
+            <Col md>
             <Row className="text-center">{getTotal()}</Row>
             <Row>
               <Button variant="primary" className="mx-auto" style={{width: "200px"}}>Checkout</Button>
             </Row>
           </Col>
+          }
         </Row>
       </Container>
   );
