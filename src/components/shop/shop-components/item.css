@@ -1,9 +1,11 @@
-.card:active {
-    transform: scale(1.03);
+.hover-card:active {
+    transition: .5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 @media all and (min-width: 1000px){
-    .card:hover {
-        transform: scale(1.03);
+    .hover-card:hover {
+        transition: .2s;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 25px -7px, rgba(0, 0, 0, 0.3) 0px 3px 11px -13px;
     }
 }

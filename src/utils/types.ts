@@ -10,7 +10,7 @@ declare global {
       }
 
       interface CartItemObject {
-        item: ItemObject;
+        itemProperties: ItemObject;
         quantity: number;
       }
 

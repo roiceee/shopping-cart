@@ -2,28 +2,29 @@ import * as React from "react";
 import Button from "react-bootstrap/esm/Button";
 import Row from "react-bootstrap/esm/Row";
 import Container from "react-bootstrap/esm/Container";
-import "./add-to-cart.css";
+import "./cart-adder.css";
 import { useContext } from "react";
 import CartContext from "../../../utils/context/cart-context";
 
 const MAXQUANTITY = 99;
 interface AddToCartProps {
   itemObj: ItemObject;
+  setModalShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function CartAdder({ itemObj }: AddToCartProps) {
+function CartAdder({ itemObj, setModalShow }: AddToCartProps) {
   const { cartState, setCartState } = useContext(CartContext);
   const [currentCartItem, setCurrentCartItem] = React.useState<CartItemObject>({
     quantity: 0,
-    item: itemObj,
+    itemProperties: itemObj,
   });
 
   const addToCart = React.useCallback((): void => {
-
     if (currentCartItem.quantity === 0) {
       return;
     }
 
+    setModalShow(false);
     setCartState((prevCartState) => ({
       ...prevCartState,
       items: [...prevCartState.items, currentCartItem],
@@ -150,7 +151,11 @@ function CartAdder({ itemObj }: AddToCartProps) {
         </Button>
       </Row>
       <Row>
-        <Button className="rounded-pill" onClick={addToCart} disabled={currentCartItem.quantity === 0 ? true : false}>
+        <Button
+          className="rounded-pill"
+          onClick={addToCart}
+          disabled={currentCartItem.quantity === 0 ? true : false}
+        >
           Add to cart
         </Button>
       </Row>

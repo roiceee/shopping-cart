@@ -2,7 +2,7 @@ import * as React from "react";
 import Modal from "react-bootstrap/esm/Modal";
 import { generateStars } from "../../../utils/shop-utils/item-utils";
 import Row from "react-bootstrap/esm/Row";
-import CartAdder from "./add-to-cart";
+import CartAdder from "./cart-adder";
 
 interface ItemModalProps {
   modalShow: boolean;
@@ -29,12 +29,12 @@ function ItemModal({ modalShow, itemObj, setModalShow }: ItemModalProps) {
         <img src={itemObj?.src} alt={itemObj.name} className="img-fluid" />
         </div>
         <Row className="mt-2">
-          <div style={{ color: "darkorange", fontSize: "1.05rem" }}>
+          <div style={{ color: "darkorange", fontSize: "1.4rem" }}>
             ₱{itemObj.price}
           </div>
           <div className="d-flex gap-1 m-1">{generateStars(itemObj.stars)}</div>
         </Row>
-        <CartAdder itemObj={itemObj}/>
+        <CartAdder itemObj={itemObj} setModalShow={setModalShow}/>
       </Modal.Body>
     </Modal>
   );

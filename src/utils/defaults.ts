@@ -7,7 +7,7 @@ const defaultItemObject : ItemObject = {
 }
 
 const defaultCartItemObject : CartItemObject = {
-    item: defaultItemObject,
+    itemProperties: defaultItemObject,
     quantity: 0,
 }
 
