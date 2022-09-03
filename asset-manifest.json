@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.c83f6680.css",
-    "main.js": "/shopping-cart/static/js/main.7b66c2c0.js",
-    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
-    "static/media/homepage-main.jpg": "/shopping-cart/static/media/homepage-main.dc9d4658ec5215abaac6.jpg",
-    "static/media/homepage-shop-aquarium.avif": "/shopping-cart/static/media/homepage-shop-aquarium.c61366d23687f7258361.avif",
-    "static/media/homepage-shop-fish.avif": "/shopping-cart/static/media/homepage-shop-fish.a46646d3264c0e99b845.avif",
-    "index.html": "/shopping-cart/index.html",
-    "static/media/trash.svg": "/shopping-cart/static/media/trash.0abd9175fefc7ae8cd82e01012bd0717.svg",
-    "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.17ec3f81e25c1bfbe247711e21fef47a.svg",
-    "main.c83f6680.css.map": "/shopping-cart/static/css/main.c83f6680.css.map",
-    "main.7b66c2c0.js.map": "/shopping-cart/static/js/main.7b66c2c0.js.map",
-    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+    "main.css": "/static/css/main.c83f6680.css",
+    "main.js": "/static/js/main.5b9a92cb.js",
+    "static/js/787.d6fe38e8.chunk.js": "/static/js/787.d6fe38e8.chunk.js",
+    "static/media/homepage-main.jpg": "/static/media/homepage-main.dc9d4658ec5215abaac6.jpg",
+    "static/media/homepage-shop-aquarium.avif": "/static/media/homepage-shop-aquarium.c61366d23687f7258361.avif",
+    "static/media/homepage-shop-fish.avif": "/static/media/homepage-shop-fish.a46646d3264c0e99b845.avif",
+    "index.html": "/index.html",
+    "static/media/trash.svg": "/static/media/trash.0abd9175fefc7ae8cd82e01012bd0717.svg",
+    "static/media/shopping-cart.svg": "/static/media/shopping-cart.17ec3f81e25c1bfbe247711e21fef47a.svg",
+    "main.c83f6680.css.map": "/static/css/main.c83f6680.css.map",
+    "main.5b9a92cb.js.map": "/static/js/main.5b9a92cb.js.map",
+    "787.d6fe38e8.chunk.js.map": "/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c83f6680.css",
-    "static/js/main.7b66c2c0.js"
+    "static/js/main.5b9a92cb.js"
   ]
 }
