@@ -19,8 +19,7 @@ function CartItemCard({ item }: CartItemCardProps) {
 
   return (
     <>
-      <Col>
-        <Card style={{ maxWidth: "400px" }} className="p-1 mx-auto mb-2">
+        <Card style={{ maxWidth: "400px", height: "fit-content"}} className="p-1 mx-auto mb-2">
           <Row>
             <Col className="col-4">
               <div className="rounded-1">
@@ -65,7 +64,6 @@ function CartItemCard({ item }: CartItemCardProps) {
             </Col>
           </Row>
         </Card>
-      </Col>
       <DeleteItemModal
         item={item}
         show={modalShow}

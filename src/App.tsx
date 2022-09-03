@@ -8,6 +8,7 @@ import Shop from "./components/shop/shop";
 import CartContext from "./utils/context/cart-context";
 import { defaultCartObject } from "./utils/defaults";
 import CartPage from "./components/cart/cart-page";
+import AboutPage from "./components/about/about";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/shop/:id" element={<Shop />} />
                 <Route path="/cart" element={<CartPage />} />
+                <Route path="/about" element={<AboutPage />} />
               </Routes>
             </CartContext.Provider>
           </div>

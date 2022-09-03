@@ -39,7 +39,7 @@ function CartPage() {
         </Row>
         <Row className="gap-3">
           <Col md>
-            <Row className="px-2 row-cols-1 overflow-auto" style={{height: "450px"}}>
+            <Row className="px-2 row-cols-1  d-flex flex-column" style={{height: "450px"}}>
               {cartState.items.map((item) => {
                 return (
                   <CartItemCard

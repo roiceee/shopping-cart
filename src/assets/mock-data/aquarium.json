@@ -3,21 +3,21 @@
     {
       "id": "aquarium3",
       "src": " https://i.ibb.co/GQnhLMG/aquarium-3-5gal.jpg",
-      "name": "Aqueon Aquarium 3.5 gallons",
+      "name": "Taliqua Aquarium 3.5 gallons",
       "price": 500,
       "stars": 3
     },
     {
       "id": "aquarium1",
       "src": "https://i.ibb.co/cvcRpRR/aquarium-2gal.jpg",
-      "name": "Fluvial Aquarium 2 gallons",
+      "name": "EnderBay Aquarium 2 gallons",
       "price": 300,
       "stars": 1
     },
     {
       "id": "aquarium6",
       "src": "https://i.ibb.co/Zx64Fzr/aquarium-75gal.jpg",
-      "name": "CaribSea Aquarium 75 gallons",
+      "name": "Wasonbeach Aquarium 75 gallons",
       "price": 5000,
       "stars": 5
     },
@@ -38,7 +38,7 @@
       {
         "id": "aquarium5",
         "src": "https://i.ibb.co/g772pFP/aquarium-36gal.jpg",
-        "name": "HBH Aquarium 36 gallons",
+        "name": "Katips Aquarium 36 gallons",
         "price": 3000,
         "stars": 5
       }
